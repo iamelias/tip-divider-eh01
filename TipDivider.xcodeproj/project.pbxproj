@@ -15,6 +15,7 @@
 		64548F0F25ABBD11004FA03F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64548F0D25ABBD11004FA03F /* LaunchScreen.storyboard */; };
 		64548F1A25ABBD11004FA03F /* TipDividerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64548F1925ABBD11004FA03F /* TipDividerTests.swift */; };
 		64548F2525ABBD11004FA03F /* TipDividerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64548F2425ABBD11004FA03F /* TipDividerUITests.swift */; };
+		64548F3625ABD01D004FA03F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64548F3525ABD01D004FA03F /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		64548F2025ABBD11004FA03F /* TipDividerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipDividerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64548F2425ABBD11004FA03F /* TipDividerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDividerUITests.swift; sourceTree = "<group>"; };
 		64548F2625ABBD11004FA03F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64548F3525ABD01D004FA03F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				64548F0B25ABBD11004FA03F /* Assets.xcassets */,
 				64548F0D25ABBD11004FA03F /* LaunchScreen.storyboard */,
 				64548F1025ABBD11004FA03F /* Info.plist */,
+				64548F3525ABD01D004FA03F /* Calculator.swift */,
 			);
 			path = TipDivider;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64548F0725ABBD0E004FA03F /* ViewController.swift in Sources */,
+				64548F3625ABD01D004FA03F /* Calculator.swift in Sources */,
 				64548F0325ABBD0E004FA03F /* AppDelegate.swift in Sources */,
 				64548F0525ABBD0E004FA03F /* SceneDelegate.swift in Sources */,
 			);
