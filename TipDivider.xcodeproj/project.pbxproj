@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643B239D25AD119D005FC822 /* CalcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643B239C25AD119D005FC822 /* CalcViewModel.swift */; };
 		64548F0325ABBD0E004FA03F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64548F0225ABBD0E004FA03F /* AppDelegate.swift */; };
 		64548F0525ABBD0E004FA03F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64548F0425ABBD0E004FA03F /* SceneDelegate.swift */; };
 		64548F0725ABBD0E004FA03F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64548F0625ABBD0E004FA03F /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		643B239C25AD119D005FC822 /* CalcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcViewModel.swift; sourceTree = "<group>"; };
 		64548EFF25ABBD0E004FA03F /* TipDivider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipDivider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64548F0225ABBD0E004FA03F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64548F0425ABBD0E004FA03F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,9 +80,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		643B23A125AD11C9005FC822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		643B23A225AD11D0005FC822 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		643B23A325AD11D8005FC822 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		64548EF625ABBD0E004FA03F = {
 			isa = PBXGroup;
 			children = (
+				643B23A325AD11D8005FC822 /* ViewModel */,
+				643B23A225AD11D0005FC822 /* View */,
+				643B23A125AD11C9005FC822 /* Model */,
 				64548F0125ABBD0E004FA03F /* TipDivider */,
 				64548F1825ABBD11004FA03F /* TipDividerTests */,
 				64548F2325ABBD11004FA03F /* TipDividerUITests */,
@@ -109,6 +135,7 @@
 				64548F0D25ABBD11004FA03F /* LaunchScreen.storyboard */,
 				64548F1025ABBD11004FA03F /* Info.plist */,
 				64548F3525ABD01D004FA03F /* Calculator.swift */,
+				643B239C25AD119D005FC822 /* CalcViewModel.swift */,
 			);
 			path = TipDivider;
 			sourceTree = "<group>";
@@ -262,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64548F0725ABBD0E004FA03F /* ViewController.swift in Sources */,
+				643B239D25AD119D005FC822 /* CalcViewModel.swift in Sources */,
 				64548F3625ABD01D004FA03F /* Calculator.swift in Sources */,
 				64548F0325ABBD0E004FA03F /* AppDelegate.swift in Sources */,
 				64548F0525ABBD0E004FA03F /* SceneDelegate.swift in Sources */,

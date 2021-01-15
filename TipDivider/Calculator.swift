@@ -9,9 +9,14 @@ import Foundation
 import UIKit
 
 class Calculator {
-    var totalAmount: Double = 0.0
-    var numberOfPeople: Double = 1.0
+    var totalAmount: Double 
+    var numberOfPeople: Double
     var tipPerPerson: Double {
         return totalAmount/numberOfPeople
+    }
+    
+    init(totalAmount: Double, numberOfPeople: Double) {
+        self.totalAmount = totalAmount
+        self.numberOfPeople = numberOfPeople
     }
 }
