@@ -19,27 +19,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return Int(peopleStepper.value)
     }
     
-    var calc: Calculator!
-    var calcViewModel: CalcViewModel!
+    var calc: Calculator {
+        return Calculator(totalAmount: Double(totalAmount.text ?? "") ?? 0.0, numberOfPeople: Double(numPeopLabel.text ?? "") ?? 0.0, tipPercentage: selectedPercentage)
+    }
     
-    let percentsArray = [10,15,20,25]
-    var selectedPercentage = 0 
+    var calcViewModel: CalcViewModel {
+        return CalcViewModel(calc: calc)
+    }
+    
+    let percentsArray: [Double] = [1.0,0.10,0.15,0.20,0.25]
+    var selectedPercentage: Double = 1.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         totalTextField.delegate = self
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
-    }
+
     @IBAction func percentTapped(_ sender: UISegmentedControl) {
         selectedPercentage = percentsArray[sender.selectedSegmentIndex] //selecting percentage to use
     }
@@ -50,18 +45,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func calculateTapped(_ sender: Any) {
-        totalAmount.text = totalTextField.text
-        guard let totalAmountD = totalAmount.text, let numPeopleLabelD = numPeopLabel.text else {
-            return
-        }
-        
-        calc = Calculator(totalAmount: Double(totalAmountD) ?? 0.0, numberOfPeople: Double(numPeopleLabelD) ?? 0.0)
-        
-        calcViewModel = CalcViewModel(calc: calc)
+        setView()
     }
     
     func setView() {
-        
+        totalAmount.text = calcViewModel.totalAmount
+        numPeopLabel.text = calcViewModel.numberOfPeople
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

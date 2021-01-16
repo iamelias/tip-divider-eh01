@@ -84,6 +84,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cO8-Cr-twJ">
                                 <rect key="frame" x="20" y="343" width="374" height="32"/>
                                 <segments>
+                                    <segment title="None"/>
                                     <segment title="10%"/>
                                     <segment title="15%"/>
                                     <segment title="20%"/>
@@ -93,6 +94,12 @@
                                     <action selector="percentTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="tBB-id-0v6"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip Divider" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDb-Rc-7g0">
+                                <rect key="frame" x="161.66666666666666" y="44" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
@@ -104,6 +111,7 @@
                             <constraint firstItem="q5a-gh-uaI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6j3-eu-g7f"/>
                             <constraint firstItem="cO8-Cr-twJ" firstAttribute="top" secondItem="oQv-uR-47u" secondAttribute="bottom" constant="30" id="JQc-Br-cED"/>
                             <constraint firstItem="1Se-7K-4wN" firstAttribute="centerX" secondItem="q5a-gh-uaI" secondAttribute="centerX" id="Ji9-fr-DOX"/>
+                            <constraint firstItem="yDb-Rc-7g0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KUM-eA-X0A"/>
                             <constraint firstItem="kpn-4I-7mM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MaX-TO-QmU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BjN-aB-jsC" secondAttribute="trailing" constant="131" id="MkY-Zr-96q"/>
                             <constraint firstItem="OPq-zL-iGV" firstAttribute="centerX" secondItem="hZO-TQ-pK0" secondAttribute="centerX" id="O4C-pn-l53"/>
@@ -117,6 +125,7 @@
                             <constraint firstItem="OPq-zL-iGV" firstAttribute="top" secondItem="hZO-TQ-pK0" secondAttribute="bottom" constant="8" symbolic="YES" id="pHL-oq-Rty"/>
                             <constraint firstItem="BjN-aB-jsC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="syL-cu-3j2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kpn-4I-7mM" secondAttribute="trailing" constant="20" id="tE4-UM-lZQ"/>
+                            <constraint firstItem="yDb-Rc-7g0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tFY-1q-nsS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oQv-uR-47u" secondAttribute="trailing" constant="20" id="tTK-hZ-2tu"/>
                             <constraint firstItem="hZO-TQ-pK0" firstAttribute="top" secondItem="1Se-7K-4wN" secondAttribute="bottom" constant="8" symbolic="YES" id="tbD-Mk-CyG"/>
                             <constraint firstItem="kik-GZ-bm4" firstAttribute="centerX" secondItem="q5a-gh-uaI" secondAttribute="centerX" id="uJa-M0-ZGc"/>

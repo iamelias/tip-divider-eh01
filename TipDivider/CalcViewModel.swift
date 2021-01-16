@@ -14,12 +14,16 @@ class CalcViewModel {
         
         return "$" + String(format: "%.2f", calc.totalAmount) //creating $0.00 format
     }
-    var numberOfPeople: Double {
-        return calc.numberOfPeople
+    var numberOfPeople: String {
+        return "\(calc.numberOfPeople)"
     }
     
     var tipPerPerson: String {
-        return "$" + String(format: "%.2f", calc.totalAmount/calc.numberOfPeople) //creating $0.00 format
+        return "$" + String(format: "%.2f", calc.tipPerPerson) //creating $0.00 format
+    }
+    
+    var tipPercentage: String {
+        return "%"
     }
     
     

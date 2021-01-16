@@ -6,17 +6,18 @@
 //
 
 import Foundation
-import UIKit
 
 class Calculator {
     var totalAmount: Double 
     var numberOfPeople: Double
+    var tipPercentage: Double
     var tipPerPerson: Double {
-        return totalAmount/numberOfPeople
+        return (tipPercentage*totalAmount)/numberOfPeople
     }
     
-    init(totalAmount: Double, numberOfPeople: Double) {
+    init(totalAmount: Double, numberOfPeople: Double, tipPercentage: Double) {
         self.totalAmount = totalAmount
         self.numberOfPeople = numberOfPeople
+        self.tipPercentage = tipPercentage
     }
 }
