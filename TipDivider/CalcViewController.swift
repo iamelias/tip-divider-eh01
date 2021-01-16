@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class CalcViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var totalAmount: UILabel!
     @IBOutlet weak var tipPerPerson: UILabel!
     @IBOutlet weak var totalTextField: UITextField!
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     var calc: Calculator {
-        return Calculator(totalAmount: Double(totalTextField.text ?? "") ?? 2.0, numberOfPeople: stepper, tipPercentage: selectedPercentage)
+        return Calculator(totalAmount: Double(totalTextField.text ?? "") ?? 0.0, numberOfPeople: stepper, tipPercentage: selectedPercentage)
     }
     
     var calcViewModel: CalcViewModel {
@@ -41,10 +41,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func stepperTapped(_ sender: UIStepper) {
         numPeopLabel.text = "\(Int(stepper))"
-        
-        //peopleStepper.value = sender.value //stepper value
-        //print("people stepper value: \(peopleStepper.value)")
-        //numPeopLabel.text = "\(stepper)"
     }
     
     @IBAction func calculateTapped(_ sender: Any) {
