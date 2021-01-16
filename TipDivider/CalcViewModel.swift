@@ -15,17 +15,16 @@ class CalcViewModel {
         return "$" + String(format: "%.2f", calc.totalAmount) //creating $0.00 format
     }
     var numberOfPeople: String {
-        return "\(calc.numberOfPeople)"
+        return "\(Int(calc.numberOfPeople))"
     }
     
-    var tipPerPerson: String {
-        return "$" + String(format: "%.2f", calc.tipPerPerson) //creating $0.00 format
+    var tipPerPerson: String { //Decimal $ amount / person
+        return "$" + String(format: "%.2f", calc.tipPerPerson) + "/person" //creating $0.00 format
     }
     
-    var tipPercentage: String {
-        return "%"
+    var tipPercentage: Double { //Decimal version of tip percentage
+        return calc.tipPercentage
     }
-    
     
     init(calc: Calculator) {
         self.calc = calc

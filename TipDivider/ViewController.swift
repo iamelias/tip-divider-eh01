@@ -15,12 +15,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var peopleStepper: UIStepper!
     @IBOutlet weak var percentSegment: UISegmentedControl!
     
-    var stepper: Int {
-        return Int(peopleStepper.value)
+    var stepper: Double {
+        return peopleStepper.value
     }
     
     var calc: Calculator {
-        return Calculator(totalAmount: Double(totalAmount.text ?? "") ?? 0.0, numberOfPeople: Double(numPeopLabel.text ?? "") ?? 0.0, tipPercentage: selectedPercentage)
+        return Calculator(totalAmount: Double(totalTextField.text ?? "") ?? 2.0, numberOfPeople: stepper, tipPercentage: selectedPercentage)
     }
     
     var calcViewModel: CalcViewModel {
@@ -40,8 +40,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func stepperTapped(_ sender: UIStepper) {
-        peopleStepper.value = sender.value
-        numPeopLabel.text = "\(stepper)"
+        numPeopLabel.text = "\(Int(stepper))"
+        
+        //peopleStepper.value = sender.value //stepper value
+        //print("people stepper value: \(peopleStepper.value)")
+        //numPeopLabel.text = "\(stepper)"
     }
     
     @IBAction func calculateTapped(_ sender: Any) {
@@ -49,8 +52,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setView() {
-        totalAmount.text = calcViewModel.totalAmount
-        numPeopLabel.text = calcViewModel.numberOfPeople
+        totalAmount.text = calcViewModel.totalAmount //Total amount label
+        tipPerPerson.text = calcViewModel.tipPerPerson
+        selectedPercentage = calcViewModel.tipPercentage //selected percentage being used
+        percentSegment.selectedSegmentIndex = percentsArray.firstIndex {$0 == selectedPercentage} ?? 0 //index of selected percentage in array
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
