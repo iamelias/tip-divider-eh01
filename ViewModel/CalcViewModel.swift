@@ -19,7 +19,7 @@ class CalcViewModel {
     }
     
     var tipPerPerson: String { //Decimal $ amount / person
-        return "$" + String(format: "%.2f", calc.tipPerPerson) + "/person" //creating $0.00 format
+        return "Tip: $" + String(format: "%.2f", calc.tipPerPerson) + "/person" //creating $0.00 format
     }
     
     var tipPercentage: Double { //Decimal version of tip percentage

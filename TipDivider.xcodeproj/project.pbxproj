@@ -83,6 +83,7 @@
 		643B23A125AD11C9005FC822 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				64548F3525ABD01D004FA03F /* Calculator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +91,7 @@
 		643B23A225AD11D0005FC822 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				64548F0825ABBD0E004FA03F /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 		643B23A325AD11D8005FC822 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				643B239C25AD119D005FC822 /* CalcViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -130,12 +133,9 @@
 				64548F0225ABBD0E004FA03F /* AppDelegate.swift */,
 				64548F0425ABBD0E004FA03F /* SceneDelegate.swift */,
 				64548F0625ABBD0E004FA03F /* CalcViewController.swift */,
-				64548F0825ABBD0E004FA03F /* Main.storyboard */,
 				64548F0B25ABBD11004FA03F /* Assets.xcassets */,
 				64548F0D25ABBD11004FA03F /* LaunchScreen.storyboard */,
 				64548F1025ABBD11004FA03F /* Info.plist */,
-				64548F3525ABD01D004FA03F /* Calculator.swift */,
-				643B239C25AD119D005FC822 /* CalcViewModel.swift */,
 			);
 			path = TipDivider;
 			sourceTree = "<group>";
